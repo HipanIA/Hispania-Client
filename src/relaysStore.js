@@ -2,15 +2,16 @@ import { createSlice } from "@reduxjs/toolkit";
 import { getKey, getJsonKey } from "./storage";
 
 const rw = { read: true, write: true };
+
+// Relay principal de Hispania — configurable via REACT_APP_RELAY_URL
+const HISPANIA_RELAY = process.env.REACT_APP_RELAY_URL || "wss://relay.hispania.io";
+
 const defaultRelays = [
-  { url: "wss://nostr.wine/", options: rw },
-  { url: "wss://nostr-pub.wellorder.net", options: rw },
-  { url: "wss://nostr-relay.nokotaro.com/", options: rw },
-  { url: "wss://relay.nostr.band/", options: rw },
+  { url: HISPANIA_RELAY, options: rw },        // Hispania relay (primario)
   { url: "wss://relay.damus.io/", options: rw },
+  { url: "wss://relay.nostr.band/", options: rw },
   { url: "wss://nos.lol/", options: rw },
-  { url: "wss://offchain.pub/", options: rw },
-  { url: "wss://relay.nostr.wirednet.jp/", options: rw },
+  { url: "wss://nostr.wine/", options: rw },
 ];
 
 const user = getKey("p");
