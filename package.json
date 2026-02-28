@@ -75,5 +75,7 @@
   },
   "devDependencies": {
     "prettier": "^2.8.4"
-  }
+  },
+  "homepage": "https://foro.hispania.io",
+  "description": "Cliente Nostr de formato largo para la comunidad hispanohablante"
 }
