@@ -115,7 +115,7 @@ export default function Header() {
           H
         </Heading>
         <Heading as="h1" display={["none", "none", "block"]}>
-          Habla
+          Hispania
         </Heading>
       </Link>
       {isHomePage && <RelaySelector ml={2} />}

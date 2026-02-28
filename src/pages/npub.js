@@ -13,7 +13,7 @@ export default function Npub() {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Habla</title>
+        <title>Hispania</title>
       </Helmet>
       <Layout>
         <UserProfile pubkey={pubkey} />

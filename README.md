@@ -1,47 +1,39 @@
-# habla
+# Hispania Client
 
-A web client to read/write [long form nostr content](https://github.com/nostr-protocol/nips/blob/master/23.md).
+Cliente Nostr para contenido de formato largo en español — basado en NIP-23.
 
-Available in https://habla.news.
+Inspirado en la topología editorial de LessWrong / Alignment Forum: artículos largos, comentarios anidados, curación comunitaria.
 
-## Contribute
+## Stack
 
-To run Habla locally for development,
+- React 18 + Chakra UI
+- nostr-tools (NIP-07, NIP-23, NIP-57)
+- Autenticación vía extensión de navegador (NIP-07)
 
-* install node, git, yarn
-* clone Habla
-* run:
-  ```
-  yarn install
-  yarn start
-  ```
+## Desarrollo local
 
-This should start a local server and open a browser with the project. You can
-now start modifying the code and see the changes in real time.
-
-## Run your own instance
-
-```
+```bash
 yarn install
-yarn build
-rsync --recursive --delete /path/to/habla/build/ your.server:/your/path/on/server/
+yarn start
 ```
 
-You will need a domain or subdomain for this as file references in the code
-are absolute paths, currently not allowing it to run Habla under
-`https://yourserver.com/habla/` for example.
+## Arquitectura
 
-For deep links to articles for example to work, you have to tell your server to
-have requests not found be handled by your index.html. In `nginx` that can be
-achieved by adding:
+- **Feed principal**: artículos NIP-23 ordenados por relevancia/tiempo
+- **Artículo**: renderizado Markdown con LaTeX, TOC automático, zaps inline
+- **Perfil**: artículos publicados + bio Nostr
+- **Editor**: NIP-23 completo con draft support
 
-```
-server {
-  ...
-  location / {
-    autoindex off;
-    expires off;
-    add_header Cache-Control "public, max-age=0, s-maxage=0, must-revalidate" always;
-    try_files $uri /index.html =404;
-  }
-```
+## Organización
+
+- `src/pages/` — rutas principales
+- `src/lib/` — componentes reutilizables
+- `src/nostr/` — lógica Nostr (relays, eventos, auth)
+
+## Contribuir
+
+Repositorio: [HipanIA/Hispania-Client](https://github.com/HipanIA/Hispania-Client)
+
+---
+
+*Fork de [verbiricha/habla](https://github.com/verbiricha/habla)*

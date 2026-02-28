@@ -66,7 +66,7 @@ export default function Write() {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Habla</title>
+        <title>Hispania</title>
       </Helmet>
       <Layout
         aside={

@@ -25,7 +25,7 @@ export default function Tag() {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Habla - #{t}</title>
+        <title>Hispania - #{t}</title>
       </Helmet>
       <Layout
         aside={

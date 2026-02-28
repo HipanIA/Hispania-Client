@@ -50,7 +50,7 @@ export default function AddressPage() {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Habla</title>
+        <title>Hispania</title>
       </Helmet>
       <Layout
         aside={

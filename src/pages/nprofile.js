@@ -12,7 +12,7 @@ export default function Nprofile() {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Habla</title>
+        <title>Hispania</title>
       </Helmet>
       <Layout>
         <UserProfile pubkey={pubkey} relays={relays} />

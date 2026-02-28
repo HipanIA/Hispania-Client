@@ -15,7 +15,7 @@ export default function Profile() {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Habla - {data?.display_name && `- ${data.display_name}`} </title>
+        <title>Hispania - {data?.display_name && `- ${data.display_name}`} </title>
       </Helmet>
       <Layout>
         <UserProfile pubkey={pubkey} />

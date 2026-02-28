@@ -55,7 +55,7 @@ export default function Relay() {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Habla - Notes on {relay}</title>
+        <title>Hispania - Notes on {relay}</title>
       </Helmet>
       <Layout
         aside={

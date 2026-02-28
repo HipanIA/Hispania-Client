@@ -29,7 +29,7 @@ export default function Relays() {
     <Layout singleColumn={true}>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Habla - Relay Explorer</title>
+        <title>Hispania - Relay Explorer</title>
       </Helmet>
       <Heading fontWeight={500} as="h2" mb={2}>
         Relays
